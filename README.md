@@ -13,7 +13,7 @@ The result is a highly intelligent system capable of understanding both meaning 
 ## 🌟 Features
 
 ### 📁 Smart File Upload & ETL Pipeline  
-- Upload `.txt`, `.pdf`, `.csv`, `.json`, `.doc`, `.docx`  
+- Upload `.txt`
 - Extract → Chunk → Embed → Graph Build  
 - Automatically creates:
   - Vector embeddings  
