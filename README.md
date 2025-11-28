@@ -25,30 +25,6 @@ The result is a highly intelligent system capable of understanding both meaning 
 ### 🧠 Hybrid Vector + Graph Search  
 Search blends semantic meaning with structural relationships.
 
-# 📂 Project Structure
-
-📦 DevForge-B2C
- ┣ 📂 client
- ┃ ┣ 📂 public
- ┃ ┣ 📂 src
- ┃ ┃ ┣ App.tsx
- ┃ ┃ ┣ main.tsx
- ┃ ┃ ┣ 📂 components
- ┃ ┃ ┃ ┣ FileUpload.tsx
- ┃ ┃ ┃ ┣ QueryInterface.tsx
- ┃ ┃ ┃ ┣ ResultsDisplay.tsx
- ┃ ┃ ┃ ┣ GraphVisualization.tsx
- ┃ ┃ ┣ 📂 ui (ShadCN UI components)
- ┃ ┃ ┣ 📂 integrations/supabase
- ┣ 📂 supabase
- ┃ ┣ config.toml
- ┃ ┣ 📂 functions
- ┃ ┃ ┣ 📂 process-file      # ETL + vector & graph builder
- ┃ ┃ ┣ 📂 hybrid-search     # Hybrid search engine
- ┗ README.md
-
-
-
 
 ---
 
