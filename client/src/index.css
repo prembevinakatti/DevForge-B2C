@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 27% 4%;
+    --foreground: 200 20% 98%;
+
+    --card: 220 25% 6%;
+    --card-foreground: 200 20% 98%;
+
+    --popover: 220 25% 6%;
+    --popover-foreground: 200 20% 98%;
+
+    --primary: 195 92% 55%;
+    --primary-foreground: 220 27% 4%;
+
+    --secondary: 220 20% 12%;
+    --secondary-foreground: 200 20% 98%;
+
+    --muted: 220 20% 15%;
+    --muted-foreground: 200 10% 60%;
+
+    --accent: 185 100% 50%;
+    --accent-foreground: 220 27% 4%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 200 20% 98%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 195 92% 55%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(195 92% 55%) 0%, hsl(185 100% 50%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(220 27% 4%) 0%, hsl(220 25% 8%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(195 92% 55% / 0.15) 0%, transparent 70%);
+    
+    --shadow-glow: 0 0 40px hsl(195 92% 55% / 0.3);
+    --shadow-card: 0 8px 32px hsl(220 27% 4% / 0.5);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 220 25% 6%;
+    --sidebar-foreground: 200 20% 98%;
+    --sidebar-primary: 195 92% 55%;
+    --sidebar-primary-foreground: 220 27% 4%;
+    --sidebar-accent: 220 20% 12%;
+    --sidebar-accent-foreground: 200 20% 98%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 195 92% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background: linear-gradient(180deg, hsl(220 27% 4%) 0%, hsl(220 25% 8%) 100%);
+  }
+}
+
+@layer utilities {
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .graph-node {
+    background: hsl(var(--card));
+    border: 2px solid hsl(var(--primary) / 0.3);
+    transition: var(--transition-smooth);
+  }
+  
+  .graph-node:hover {
+    border-color: hsl(var(--primary));
+    box-shadow: var(--shadow-glow);
+    transform: scale(1.05);
+  }
+  
+  .connection-line {
+    stroke: hsl(var(--accent));
+    stroke-width: 2;
+    opacity: 0.6;
+    filter: drop-shadow(0 0 8px hsl(var(--accent) / 0.5));
+  }
+}

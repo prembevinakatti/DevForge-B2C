@@ -1,0 +1,7 @@
+project_id = "odyqsxlzrbzoauegscdw"
+
+[functions.process-file]
+verify_jwt = false
+
+[functions.hybrid-search]
+verify_jwt = false
